@@ -1,4 +1,4 @@
 name: NativeMC
 version: '${project.version}'
-main: com.acrylic.nativemccore.NativeMcCore
+main: com.acrylic.nativemccore.NativeMCCore
 api-version: 1.18
