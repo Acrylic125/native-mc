@@ -1,12 +1,13 @@
 package com.acrylic.nativemccore;
 
+import com.acrylic.nativemc1_18.factory.NativeFactoryImpl;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class NativeMcCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        NativeMC.setNativeFactory(new NativeFactoryImpl());
 
     }
 
