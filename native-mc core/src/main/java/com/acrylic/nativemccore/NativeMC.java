@@ -2,6 +2,9 @@ package com.acrylic.nativemccore;
 
 import com.acrylic.nativemcuniversal.NativeMCManager;
 import com.acrylic.nativemcuniversal.factory.EntityFactory;
+import com.acrylic.nativemcuniversal.packets.PacketWrapper;
+import com.acrylic.nativemcuniversal.renderer.PacketSender;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -33,6 +36,18 @@ public final class NativeMC {
 
     public static EntityFactory useEntity() {
         return nativeMCManager.useEntity();
+    }
+
+    public static PacketSender usePacketSender() {
+        return nativeMCManager.usePacketSender();
+    }
+
+    public static void sendPacket(Player player, Object packet) {
+        nativeMCManager.usePacketSender().send(player, packet);
+    }
+
+    public static void sendPacket(Player player, PacketWrapper packetWrapper) {
+        nativeMCManager.usePacketSender().send(player, packetWrapper);
     }
 
 }
